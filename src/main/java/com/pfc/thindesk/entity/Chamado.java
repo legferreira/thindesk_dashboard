@@ -1,5 +1,7 @@
 package com.pfc.thindesk.entity;
 
+import jakarta.validation.constraints.NotBlank;
+import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,11 +11,21 @@ public class Chamado{
     
     @Id
     private String id;
+
+    @NotBlank(message = "Informe a descrição")
     private String descricao;
+
+    @NotBlank(message = "Informe o status")
     private String status;
+
+    @NotBlank(message = "Informe o tipo")
     private String tipo;
+
     private String tecnico;
     private String usuario;
+    private String observacaoTecnica;
+    private LocalDate dataAbertura;
+    private LocalDate dataConclusao;
 
     public String getId() {
         return id;
@@ -62,7 +74,28 @@ public class Chamado{
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
-    
-    
-    
+
+    public String getObservacaoTecnica() {
+        return observacaoTecnica;
+    }
+
+    public void setObservacaoTecnica(String observacaoTecnica) {
+        this.observacaoTecnica = observacaoTecnica;
+    }
+
+    public LocalDate getDataAbertura() {
+        return dataAbertura;
+    }
+
+    public void setDataAbertura(LocalDate dataAbertura) {
+        this.dataAbertura = dataAbertura;
+    }
+
+    public LocalDate getDataConclusao() {
+        return dataConclusao;
+    }
+
+    public void setDataConclusao(LocalDate dataConclusao) {
+        this.dataConclusao = dataConclusao;
+    }
 }
