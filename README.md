@@ -4,6 +4,11 @@ Dashboard administrativo integrado ao sistema de chamados Thindesk. O painel con
 
 O projeto parte do sistema Thindesk disponibilizado na disciplina (Spring Boot, Thymeleaf, Spring Security e MongoDB), acrescentando a API e a tela do dashboard.
 
+## Entrega
+
+* [Documentação (PDF)](documento_e_video/documentacao.pdf)
+* [Vídeo de apresentação](documento_e_video/video-apresentacao.mp4)
+
 ## Funcionalidades do dashboard
 
 * Indicadores gerais: total de chamados, abertos, em andamento, concluídos e tempo médio de atendimento
